@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /storage/
+
+# Replace with the live domain at launch:
+Sitemap: https://progixdigital.com/sitemap.xml
