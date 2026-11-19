@@ -16,3 +16,8 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# Local meeting notes (not for version control)
+/meeting.md
+/text.md
+/changes.md

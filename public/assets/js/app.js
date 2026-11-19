@@ -244,7 +244,7 @@
         const end = parseFloat(el.dataset.count), o = { v: 0 };
         el.textContent = '0';
         ScrollTrigger.create({
-          trigger: el, start: 'top 92%', once: true,
+          trigger: el, start: 'top 75%', once: true,
           onEnter: () => gsap.to(o, { v: end, duration: 2.2, ease: 'power2.out', onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString('en-US'); } }),
         });
       });

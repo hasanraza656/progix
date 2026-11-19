@@ -589,6 +589,10 @@ return [
         ['name' => 'Epique Realty',     'file' => 'epique-realty',     'w' => 520, 'h' => 177],
         ['name' => 'TalentIDO',         'file' => 'talentido',         'w' => 520, 'h' => 119],
         ['name' => 'Viva Floors & More','file' => 'viva-floors',       'w' => 480, 'h' => 251],
+        ['name' => 'Georgia Entertainment', 'file' => 'georgia-entertainment', 'w' => 520, 'h' => 160],
+        ['name' => 'Vantage Solutions LLC', 'file' => 'vantage-solutions',     'w' => 520, 'h' => 305],
+        ['name' => 'Amazon',                'file' => 'amazon',                'w' => 520, 'h' => 292],
+        ['name' => 'Nadorra',               'file' => 'nadorra',               'w' => 520, 'h' => 208],
     ],
 
     // PLACEHOLDER niche list — confirm with client
