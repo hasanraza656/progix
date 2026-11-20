@@ -27,7 +27,7 @@
                         </ul>
                         <div class="svc-row-foot">
                             <a href="{{ route('service', $s['slug']) }}" class="btn-p btn-p--ink">Learn more <span class="btn-arrow"><x-icon name="arrow-right" :size="16" /></span></a>
-                            <span class="from">From <strong>${{ $s['from'] }}</strong></span>
+                            <span class="from">From <strong>${{ $s['from'] }}</strong> <small class="from-unit">{{ $s['from_unit'] ?? '' }}</small>@if (! empty($s['from_alt'])) <small class="from-alt">{{ $s['from_alt'] }}</small>@endif</span>
                         </div>
                     </div>
                 </article>

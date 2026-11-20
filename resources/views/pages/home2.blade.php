@@ -115,7 +115,7 @@
                             </ul>
                             <div class="h2-card-foot">
                                 <a href="{{ route('service', $s['slug']) }}" class="h2-btn h2-btn--ink">Learn more <span class="h2-btn-arrow"><x-icon name="arrow-right" :size="16" /></span></a>
-                                <span class="h2-from">from <strong>${{ $s['from'] }}</strong></span>
+                                <span class="h2-from">from <strong>${{ $s['from'] }}</strong> <small class="from-unit">{{ $s['from_unit'] ?? '' }}</small>@if (! empty($s['from_alt'])) <small class="from-alt">{{ $s['from_alt'] }}</small>@endif</span>
                             </div>
                         </div>
                         <div class="h2-card-media">

@@ -147,7 +147,7 @@
                         <div class="h3-gp-side">
                             <div class="h3-price-card">
                                 <span>Starting from</span>
-                                <strong><sup>$</sup>{{ $s['from'] }}</strong>
+                                <strong><sup>$</sup>{{ $s['from'] }}</strong> <small class="from-unit">{{ $s['from_unit'] ?? '' }}</small>@if (! empty($s['from_alt'])) <small class="from-alt">{{ $s['from_alt'] }}</small>@endif
                                 <small>Transparent pricing · no hidden fees</small>
                                 <a href="{{ route('pricing') }}#{{ $g['tab'] }}" class="h3-link">See packages <x-icon name="arrow-right" :size="16" /></a>
                             </div>
@@ -178,7 +178,7 @@
                         <span class="h3-tile-tag">{{ $s['pillar'] }}</span>
                         <strong>{{ $s['title'] }}</strong>
                         <span class="h3-tile-text">{{ $s['short'] }}</span>
-                        <span class="h3-tile-foot"><span>from <b>${{ $s['from'] }}</b></span><span class="h3-tile-go"><x-icon name="arrow-up-right" :size="18" /></span></span>
+                        <span class="h3-tile-foot"><span>from <b>${{ $s['from'] }}</b> <small class="from-unit">{{ $s['from_unit'] ?? '' }}</small>@if (! empty($s['from_alt'])) <small class="from-alt">{{ $s['from_alt'] }}</small>@endif</span><span class="h3-tile-go"><x-icon name="arrow-up-right" :size="18" /></span></span>
                     </span>
                 </a>
             @endforeach

@@ -32,7 +32,7 @@
                     </button>
                     <a href="#pricing" class="btn-p btn-p--line btn-p--lg">See pricing</a>
                 </div>
-                <p class="hero-offer" data-hero-item><x-icon name="tag" :size="16" /> <span>Starting from <strong>${{ $service['from'] }}</strong></span></p>
+                <p class="hero-offer" data-hero-item><x-icon name="tag" :size="16" /> <span>Starting from <strong>${{ $service['from'] }}</strong> <small class="from-unit">{{ $service['from_unit'] ?? '' }}</small>@if (! empty($service['from_alt'])) <small class="from-alt">{{ $service['from_alt'] }}</small>@endif</span></p>
             </div>
             <div class="col-lg-5" data-hero-item>
                 <div class="hero-photo">
@@ -140,7 +140,7 @@
                         <span class="svc-tag">{{ $s['pillar'] }}</span>
                         <h3>{{ $s['title'] }}</h3>
                         <p>{{ $s['short'] }}</p>
-                        <span class="svc-foot"><span>From <strong>${{ $s['from'] }}</strong></span><span class="svc-go"><x-icon name="arrow-up-right" :size="18" /></span></span>
+                        <span class="svc-foot"><span>From <strong>${{ $s['from'] }}</strong> <small class="from-unit">{{ $s['from_unit'] ?? '' }}</small>@if (! empty($s['from_alt'])) <small class="from-alt">{{ $s['from_alt'] }}</small>@endif</span><span class="svc-go"><x-icon name="arrow-up-right" :size="18" /></span></span>
                     </a>
                 </div>
             @endforeach

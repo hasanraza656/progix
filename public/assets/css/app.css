@@ -851,3 +851,7 @@ a.contact-card:hover { transform: translateX(6px); box-shadow: var(--shadow-1); 
 .article th, .article td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); min-width: 140px; }
 .article thead th { background: var(--bg-tint, #f3f7f4); color: var(--ink); font-weight: 800; }
 .article td { color: var(--ink-2); }
+
+/* "From $199 / month" price units */
+.from-unit { font-size: .78em; font-weight: 600; opacity: .8; white-space: nowrap; }
+.from-alt { display: block; font-size: .76em; font-weight: 600; color: var(--green-700); white-space: nowrap; }
