@@ -31,9 +31,9 @@ class SiteController extends Controller
     public function home()
     {
         return $this->page('pages.home', [
-            'title' => 'Progix Digital | Social Media, Web & AI Automation Agency',
+            'title' => 'Progix Digital | Web Development & Digital Marketing Agency',
             'raw_title' => true,
-            'description' => 'Progix Digital offers social media management, paid ads, SEO content, web development and AI automation. 1,200+ projects. Get a free quote in 24 hours.',
+            'description' => 'Web development and digital marketing agency serving the US and clients worldwide. Social media, paid ads, SEO, websites and AI automation. Free quote in 24 hours.',
             'schema' => ['faq' => config('progix.faqs'), 'reviews' => true],
         ], ['posts' => $this->latestPosts(3)]);
     }
@@ -51,9 +51,9 @@ class SiteController extends Controller
     public function home2()
     {
         return $this->page('pages.home2', [
-            'title' => 'Progix Digital | Social Media, Web & AI Automation Agency',
+            'title' => 'Progix Digital | Web Development & Digital Marketing Agency',
             'raw_title' => true,
-            'description' => 'Progix Digital offers social media management, paid ads, SEO content, web development and AI automation. 1,200+ projects. Get a free quote in 24 hours.',
+            'description' => 'Web development and digital marketing agency serving the US and clients worldwide. Social media, paid ads, SEO, websites and AI automation. Free quote in 24 hours.',
             'canonical' => url('/'),
             'noindex' => true,
         ], ['posts' => $this->latestPosts(3)]);
@@ -63,9 +63,9 @@ class SiteController extends Controller
     public function home3()
     {
         return $this->page('pages.home3', [
-            'title' => 'Progix Digital | Social Media, Web & AI Automation Agency',
+            'title' => 'Progix Digital | Web Development & Digital Marketing Agency',
             'raw_title' => true,
-            'description' => 'Progix Digital offers social media management, paid ads, SEO content, web development and AI automation. 1,200+ projects. Get a free quote in 24 hours.',
+            'description' => 'Web development and digital marketing agency serving the US and clients worldwide. Social media, paid ads, SEO, websites and AI automation. Free quote in 24 hours.',
             'canonical' => url('/'),
             'noindex' => true,
         ], ['posts' => $this->latestPosts(3)]);

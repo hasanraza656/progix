@@ -6,7 +6,7 @@
     <div class="post-body">
         <div class="post-meta">
             @if ($post->category)<span class="chip chip--soft">{{ $post->category }}</span>@endif
-            <time datetime="{{ optional($post->published_at)->toDateString() }}">{{ optional($post->published_at)->format('M j, Y') }}</time>
+            <span data-nosnippet>{{ optional($post->published_at)->format('M j, Y') }}</span>
             <span>· {{ $post->read_minutes }} min read</span>
         </div>
         <h3><a href="{{ route('post', $post->slug) }}">{{ $post->title }}</a></h3>
