@@ -31,9 +31,9 @@ class SiteController extends Controller
     public function home()
     {
         return $this->page('pages.home', [
-            'title' => 'Progix Digital — We Build. We Grow. We Automate.',
+            'title' => 'Progix Digital | Social Media, Web & AI Automation Agency',
             'raw_title' => true,
-            'description' => 'Progix Digital helps businesses grow with social media marketing, paid ads, SEO content, custom web development and AI automation. 10+ years, 1,200+ projects. Book a free consultation.',
+            'description' => 'Progix Digital offers social media management, paid ads, SEO content, web development and AI automation. 1,200+ projects. Get a free quote in 24 hours.',
             'schema' => ['faq' => config('progix.faqs'), 'reviews' => true],
         ], ['posts' => $this->latestPosts(3)]);
     }
@@ -51,9 +51,9 @@ class SiteController extends Controller
     public function home2()
     {
         return $this->page('pages.home2', [
-            'title' => 'Progix Digital — We Build. We Grow. We Automate.',
+            'title' => 'Progix Digital | Social Media, Web & AI Automation Agency',
             'raw_title' => true,
-            'description' => 'Progix Digital helps businesses grow with social media marketing, paid ads, SEO content, custom web development and AI automation.',
+            'description' => 'Progix Digital offers social media management, paid ads, SEO content, web development and AI automation. 1,200+ projects. Get a free quote in 24 hours.',
             'canonical' => url('/'),
             'noindex' => true,
         ], ['posts' => $this->latestPosts(3)]);
@@ -63,9 +63,9 @@ class SiteController extends Controller
     public function home3()
     {
         return $this->page('pages.home3', [
-            'title' => 'Progix Digital — Marketing, Websites & AI Automation',
+            'title' => 'Progix Digital | Social Media, Web & AI Automation Agency',
             'raw_title' => true,
-            'description' => 'Progix Digital helps businesses grow with social media marketing, paid ads, SEO content, custom web development and AI automation.',
+            'description' => 'Progix Digital offers social media management, paid ads, SEO content, web development and AI automation. 1,200+ projects. Get a free quote in 24 hours.',
             'canonical' => url('/'),
             'noindex' => true,
         ], ['posts' => $this->latestPosts(3)]);
@@ -107,6 +107,7 @@ class SiteController extends Controller
             'title' => 'Pricing — Transparent Packages for Every Stage',
             'description' => 'Clear, affordable pricing: social media from $199/mo, ads management from $199/mo, websites from $129, AI agents from $99. No hidden fees. Book a free consultation.',
             'crumbs' => [['Pricing', null]],
+            'schema' => ['faq' => array_slice(config('progix.faqs'), 1, 5)],
         ]);
     }
 
@@ -145,7 +146,7 @@ class SiteController extends Controller
         abort_if(! $post->is_live && ! $isAdmin, 404);
 
         if (! $isAdmin && $post->is_live) {
-            $post->increment('views');
+            Post::whereKey($post->id)->toBase()->increment('views'); // no updated_at bump: keeps "last updated" honest
         }
 
         $related = Post::published()->where('id', '!=', $post->id)
@@ -168,7 +169,7 @@ class SiteController extends Controller
             'title' => 'Contact Us — Book a Free Consultation',
             'description' => 'Talk to Progix Digital. Book a free consultation, message us on WhatsApp or send your project and get a scope and price within 24 hours.',
             'crumbs' => [['Contact', null]],
-            'schema' => ['contact' => true],
+            'schema' => ['contact' => true, 'faq' => array_slice(config('progix.faqs'), 0, 5)],
         ]);
     }
 

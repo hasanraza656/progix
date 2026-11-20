@@ -19,6 +19,16 @@ return [
     // Show small "Sample" chips on placeholder case studies while in draft.
     'draft_mode' => true,
 
+    // Entity / local-SEO signals. PLACEHOLDER: set city + country once the client confirms (leave null to hide).
+    'service_area' => 'Serving clients worldwide',
+    'location' => ['city' => null, 'country' => null],
+    // PLACEHOLDER profile URLs — added to the structured data (sameAs) as soon as they are filled in.
+    'profiles' => [
+        'upwork'          => null,
+        'clutch'          => null,
+        'google_business' => null,
+    ],
+
     'contact' => [
         // PLACEHOLDER — Pakistan number supplied later by client; US number to follow.
         'phone_pk'     => '+92 321 4002361',
@@ -722,7 +732,7 @@ return [
     ],
 
     'why' => [
-        ['icon' => 'award',        'title' => 'Proven experience',        'text' => 'Over a decade of delivering marketing, web and automation projects across 37+ niches.'],
+        ['icon' => 'award',        'title' => 'Proven experience',        'text' => '10+ years of delivering marketing, web and automation projects across 37+ niches.'],
         ['icon' => 'target',       'title' => 'Focused on outcomes',      'text' => 'We measure what matters — leads, sales and growth — not vanity metrics.'],
         ['icon' => 'message-circle','title' => 'Transparent communication','text' => 'Clear updates, honest answers and no hidden surprises, ever.'],
         ['icon' => 'layers',       'title' => 'One team, every service',  'text' => 'Marketing, development and AI under one roof, so everything works together.'],
@@ -743,21 +753,28 @@ return [
         'name'  => 'Samin Sajid',
         'role'  => 'Founder',
         'bio'   => 'Founder and business leader, focused on helping businesses embrace digital transformation through marketing, technology, and innovation.',
-        'bio_long' => 'With more than a decade of hands-on experience, Samin has led hundreds of projects from first idea to measurable results. He built Progix Digital around a simple belief: businesses grow faster when strategy, creativity and technology work together.',
+        'bio_long' => 'With 10+ years of hands-on experience, Samin has led 1,200+ projects from first idea to measurable results. He built Progix Digital around a simple belief: businesses grow faster when strategy, creativity and technology work together.',
     ],
 
     'mission' => 'To empower businesses with innovative digital solutions that simplify growth, strengthen their online presence, and create meaningful customer experiences.',
     'vision'  => 'To become a trusted digital transformation partner for businesses by combining creativity, technology, and strategic thinking.',
 
     'faqs' => [
-        ['What does Progix Digital do?', 'We are a full-service digital agency. We manage social media and paid advertising, write SEO content, design and build websites and web apps, and create AI chatbots and workflow automation — all under one roof.'],
-        ['How much do your services cost?', 'Social media management starts at $199/month, paid ads management at $199/month, website content at $99, landing pages at $129, business websites at $349 and AI agents from $99. Every price on our pricing page is transparent, and larger projects receive a custom quote.'],
-        ['How quickly can we get started?', 'Book a free consultation or send us your project details and we will reply with a clear scope and price within 24 hours. Most projects can start within a few days.'],
-        ['Do I have to sign a long-term contract?', 'No. Our monthly services are flexible, and one-time projects are priced per project with the scope written into the quotation.'],
-        ['Can I buy only one service?', 'Yes. Packages are designed to work together, but every service — from a single set of social posts to a one-time ads set-up — can be purchased on its own.'],
-        ['Which industries do you work with?', 'Over 37 niches including e-commerce, real estate, education, logistics, SaaS, recruitment and luxury retail. Our process adapts to your market.'],
-        ['How do you report results?', 'Every plan includes clear reporting — from monthly summaries to weekly snapshots on higher tiers — in plain English with next-step recommendations.'],
-        ['How can I pay?', 'Secure online payment links (Stripe / PayPal) are being added. Until then, we will send you an invoice after your consultation.'],
+        ['What does Progix Digital do?', 'Progix Digital is a full-service digital agency that manages social media and paid ads, writes SEO content, builds websites and web apps, and creates AI chatbots and workflow automation. With 10+ years of experience and 1,200+ projects, we serve clients worldwide from one team, so strategy, creative and technology work together.'],
+        ['How much does social media management cost?', 'Our social media management plans start at $199 per month for the Starter plan, which covers 20 posts and 3 platforms. The Growth plan is $299 per month and Premium is $499 per month. Each plan includes content planning, scheduling, reporting and revision rounds, with no long-term contract required.'],
+        ['How much does a website cost?', 'A landing page starts at $129, a Business Website is $349 and an Advanced Website is $999. Larger custom platforms and web apps receive a tailored quote. Every price is listed openly on our pricing page, and we confirm the full scope in writing before any work starts.'],
+        ['How long does a website take to build?', 'A landing page is usually delivered in 3–4 business days, a Business Website in 1–2 weeks and an Advanced Website in 2–4 weeks. Timelines depend on how quickly we receive your content and feedback. We confirm the exact delivery date in your quotation before starting.'],
+        ['How much do paid ads management services cost?', 'Meta Ads management is $199 per month and Google Ads management is $299 per month. These fees cover campaign set-up, tracking, optimisation and reporting. The ad budget paid to Meta or Google is separate, and we recommend a starting spend based on your goals and market.'],
+        ['How much does an AI chatbot or automation cost?', 'An AI Starter Agent for a website FAQ assistant starts at $99 as a one-time set-up. The AI Business Agent, trained on your knowledge base, is $299, and a full AI Automation System with end-to-end workflows starts at $499 per project. Complex integrations receive a custom quote.'],
+        ['How much does SEO website content cost?', 'Website content starts at $99 one-time for up to 5 pages with the Starter package, and $199 for up to 10 pages with the Professional package. Content is written around keyword research so each page can rank, and it is delivered ready to publish on your website.'],
+        ['How quickly can we get started?', 'You can start within a few days. Book a free consultation or send your project details, and we will reply with a clear scope and fixed price within 24 hours. Once you approve the quote and the first payment is arranged, our team begins planning straight away.'],
+        ['Do I have to sign a long-term contract?', 'No. Our monthly services such as social media, ads management and website care are flexible and can be changed or paused with notice. One-time projects like websites and AI set-ups are priced per project, with the scope and deliverables written clearly into your quotation.'],
+        ['Can I buy only one service?', 'Yes. Our packages work well together, but every service can be bought on its own. That includes a single month of social media posts, a one-time ads set-up, one landing page or one AI chatbot. You can add more services whenever your business is ready.'],
+        ['Which industries do you work with?', 'We have worked across more than 37 industries and niches, including e-commerce, real estate, education, logistics, SaaS, recruitment and luxury retail. Clients range from global brands to fast-growing start-ups, and our process adapts to your market, audience and goals. If your niche is not listed, ask us how we would approach it.'],
+        ['Do you work with clients outside Pakistan?', 'Yes. We serve clients worldwide and communicate by email, WhatsApp and video calls. Our team works Monday to Saturday, 10:00 to 19:00 Pakistan time, and we agree on call times that suit your time zone. We have delivered projects for clients across several countries.'],
+        ['How do you report results?', 'Every plan includes clear reporting in plain English. Monthly summaries are standard, and higher tiers add weekly snapshots. Each report shows what we did, what it achieved and our recommended next steps, so you always know how your marketing or project is performing.'],
+        ['What technologies do you use for web development?', 'We build with Laravel, React, Next.js, WordPress, Shopify and other modern tools, chosen to match your goals and budget. Every website is responsive, fast and SEO-ready. We also offer monthly care plans from $49 covering backups, updates and security after launch.'],
+        ['How can I pay?', 'After your consultation we send an invoice with the agreed scope and price. Secure online payment links through Stripe and PayPal are being added to make this faster. Monthly services are billed in advance, and one-time projects are usually split into agreed stages.'],
     ],
 ];
 

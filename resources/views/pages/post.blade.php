@@ -16,6 +16,7 @@
                 <span class="chip chip--soft">{{ $post->category }}</span>
                 <time datetime="{{ optional($post->published_at)->toDateString() }}">{{ optional($post->published_at)->format('F j, Y') }}</time>
                 <span>· {{ $post->read_minutes }} min read</span>
+                @if ($post->updated_at && $post->updated_at->gt($post->published_at ?? $post->created_at))<span>· Last updated <time datetime="{{ $post->updated_at->toDateString() }}">{{ $post->updated_at->format('F j, Y') }}</time></span>@endif
             </div>
             <h1 class="h-page" data-hero-item>{{ $post->title }}</h1>
             <p class="lead-text" data-hero-item>{{ $post->excerpt }}</p>

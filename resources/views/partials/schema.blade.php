@@ -2,7 +2,12 @@
     $c = $site['contact'];
     $graph = [];
 
-    $graph[] = [
+    $loc = $site['location'] ?? [];
+    $sameAs = collect($site['social'])->pluck('url')
+        ->merge([$site['upwork']['url'] ?? null], array_values($site['profiles'] ?? []))
+        ->filter(fn ($u) => $u && $u !== '#')->unique()->values()->all();
+
+    $org = [
         '@type' => ['Organization', 'ProfessionalService'],
         '@id' => url('/').'#organization',
         'name' => $site['name'],
@@ -10,14 +15,20 @@
         'logo' => asset('assets/img/brand/logo.png'),
         'image' => asset('assets/img/brand/og-image.jpg'),
         'slogan' => $site['tagline'],
-        'description' => 'Digital agency offering social media marketing, paid advertising, SEO content, web development and AI automation.',
+        'description' => 'Progix Digital is a digital marketing, web development and AI automation agency serving clients worldwide: social media management, paid ads, SEO content, websites, AI chatbots and workflow automation.',
         'founder' => ['@type' => 'Person', 'name' => $site['founder']['name']],
         'email' => $c['email'],
         'telephone' => $c['phone_pk'],
         'areaServed' => 'Worldwide',
         'priceRange' => '$$',
-        'sameAs' => collect($site['social'])->pluck('url')->filter(fn ($u) => $u && $u !== '#')->values()->all(),
+        'knowsAbout' => ['Social media management', 'Paid advertising', 'SEO content writing', 'Web development', 'AI chatbots', 'Workflow automation'],
+        'contactPoint' => [['@type' => 'ContactPoint', 'contactType' => 'sales', 'email' => $c['email'], 'telephone' => $c['phone_pk'], 'availableLanguage' => ['English', 'Urdu'], 'areaServed' => 'Worldwide']],
+        'sameAs' => $sameAs,
     ];
+    if (! empty($loc['city']) || ! empty($loc['country'])) {
+        $org['address'] = array_filter(['@type' => 'PostalAddress', 'addressLocality' => $loc['city'] ?? null, 'addressCountry' => $loc['country'] ?? null]);
+    }
+    $graph[] = $org;
 
     $graph[] = [
         '@type' => 'WebSite',

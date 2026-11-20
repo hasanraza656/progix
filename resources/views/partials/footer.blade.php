@@ -54,6 +54,7 @@
                     @if ($c['address'])
                         <li><x-icon name="map-pin" :size="18" /> <span>{{ $c['address'] }}</span></li>
                     @endif
+                    <li><x-icon name="globe" :size="18" /> <span>{{ $site['service_area'] }}@if (! empty($site['location']['city']) || ! empty($site['location']['country'])) · Based in {{ collect([$site['location']['city'], $site['location']['country']])->filter()->implode(', ') }}@endif</span></li>
                     <li><x-icon name="clock" :size="18" /> <span>{{ $c['hours'] }}</span></li>
                 </ul>
             </div>

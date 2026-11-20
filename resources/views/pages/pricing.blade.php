@@ -58,6 +58,8 @@
     </div>
 </section>
 
+@include('partials.pricing-table')
+
 <section class="section section--tint">
     <div class="container">
         <div class="help-card" data-reveal="scale">

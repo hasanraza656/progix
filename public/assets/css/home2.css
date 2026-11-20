@@ -236,3 +236,9 @@
   .h2-bg { transform: none; }
 }
 .no-anim .h2-slide.is-active .h2-content > * { animation: none !important; opacity: 1 !important; transform: none !important; }
+
+/* Keyword H1 (SEO) — sits above the slide content; the big "We Build / Grow / Automate" stays as the visual tagline */
+.h2-kicker-wrap { position: absolute; left: 0; right: 0; top: calc(var(--header-h) + 14px); z-index: 5; pointer-events: none; }
+.h2-kicker { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; color: rgba(255, 255, 255, .92); }
+.h2-kicker h1 { margin: 0; font-size: clamp(.82rem, 1.1vw, .98rem); font-weight: 700; letter-spacing: .01em; line-height: 1.35; color: inherit; max-width: 60ch; text-transform: none; text-align: left; }
+.h2-kicker span { font-size: .78rem; font-weight: 600; color: #7ff0bd; letter-spacing: .06em; text-transform: uppercase; }

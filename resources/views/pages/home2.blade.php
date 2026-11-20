@@ -39,7 +39,7 @@
                 <div class="h2-tint"></div>
                 <div class="container h2-content">
                     <span class="h2-chip"><x-icon :name="$s['icon']" :size="16" /> {{ $s['tag'] }}</span>
-                    @if ($i === 0)<h1 class="h2-title">{!! $s['title'] !!}</h1>@else<h2 class="h2-title">{!! $s['title'] !!}</h2>@endif
+                    <h2 class="h2-title">{!! $s['title'] !!}</h2>
                     <p class="h2-sub">{{ $s['text'] }}</p>
                     <div class="h2-actions">
                         <button type="button" class="h2-btn h2-btn--green" data-book>Book a Free Consultation <span class="h2-btn-arrow"><x-icon name="arrow-right" :size="18" /></span></button>
@@ -48,6 +48,10 @@
                 </div>
             </article>
         @endforeach
+    </div>
+
+    <div class="container h2-kicker-wrap">
+        <div class="h2-kicker"><h1>Digital marketing, web development and AI automation agency</h1><span>Serving clients worldwide</span></div>
     </div>
 
     <div class="container h2-ui">
@@ -134,7 +138,7 @@
                 <div class="col-lg-6">
                     <span class="h2-eyebrow h2-eyebrow--gold">Why Progix</span>
                     <h2 class="h2-h-light">Strategy, creativity &amp; technology — <em>working as one.</em></h2>
-                    <p class="h2-p-light">Over a decade of turning ideas into measurable results for businesses of every size. No cookie-cutter templates — every plan is shaped around your goals.</p>
+                    <p class="h2-p-light">10+ years of turning ideas into measurable results for businesses of every size. No cookie-cutter templates — every plan is shaped around your goals.</p>
                     <div class="h2-stats">
                         @foreach ($site['stats'] as $st)
                             <div><strong><span data-count="{{ $st['value'] }}">{{ number_format($st['value']) }}</span>{{ $st['suffix'] }}</strong><span>{{ $st['label'] }}</span></div>

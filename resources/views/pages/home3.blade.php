@@ -39,8 +39,8 @@
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 h3-hero-copy">
-                <span class="h3-pill" data-hero-item><span class="h3-dot"></span> Marketing · Websites · AI automation</span>
-                <h1 class="h3-h1" data-hero-item>Grow your business online <span class="h3-mark">without the guesswork.</span></h1>
+                <h1 class="h3-pill" data-hero-item><span class="h3-dot"></span> Digital marketing, web development &amp; AI automation agency</h1>
+                <p class="h3-h1" data-hero-item>Grow your business online <span class="h3-mark">without the guesswork.</span></p>
                 <p class="h3-lead" data-hero-item>One friendly expert team for social media, ads, websites and AI automation — with a clear plan and fixed price in 24 hours.</p>
 
                 {{-- Quick request: fastest way to get in touch --}}

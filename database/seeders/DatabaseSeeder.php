@@ -32,6 +32,15 @@ class DatabaseSeeder extends Seeder
                 .'<p>'.e($kw).' works best when it is consistent, measured and tied to a clear business goal. At Progix Digital we have applied these ideas across 1,200+ projects in more than 37 industries, and the same principles hold whether you are a start-up, a local business or an established brand.</p>'
                 .'<p>'.$p['outro'].'</p>';
 
+            // Long-form, answer-first version when one exists
+            $long = (require database_path('seeders/data/long-posts.php'))[$p['slug']] ?? null;
+            if ($long) {
+                $html = $long['body'];
+                $p['excerpt'] = $long['excerpt'];
+                $p['meta_title'] = $long['meta_title'];
+                $p['meta_desc'] = $long['meta_desc'];
+            }
+
             Post::firstOrCreate(['slug' => $p['slug']], [
                 'title' => $p['title'],
                 'excerpt' => $p['excerpt'],

@@ -202,3 +202,5 @@
   .home3 .fab--wa, .home3 .fab-bubble { display: none !important; } .home3 .fab-wrap { bottom: calc(88px + env(safe-area-inset-bottom)); }
 }
 @media (prefers-reduced-motion: reduce) { .h3-gp { animation: none; } .h3-btn, .h3-tile, .h3-plan, .h3-post { transition: none; } }
+
+h1.h3-pill { line-height: 1.35; letter-spacing: 0; text-align: left; }

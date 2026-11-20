@@ -23,7 +23,7 @@
     $u = $site['upwork'];
     $img2 = fn ($n, $m = false) => asset('assets/img/home2/'.$n.($m ? '-m' : '').'.webp');
     $heroSlides = [
-        ['key' => 'hero-web', 'tag' => 'Technology', 'icon' => 'code', 'title' => 'We <em>Build.</em>', 'text' => 'Modern, responsive and SEO-ready websites &amp; apps — from a single landing page to a full custom platform.', 'link' => route('service', 'web-development'), 'cta' => 'Explore web development', 'alt' => 'Source code on a laptop screen in a dark room'],
+        ['key' => 'hero-web', 'tag' => 'Technology', 'icon' => 'code', 'title' => 'We <em>Build.</em>', 'text' => 'Modern, responsive and SEO-ready websites & apps — from a single landing page to a full custom platform.', 'link' => route('service', 'web-development'), 'cta' => 'Explore web development', 'alt' => 'Source code on a laptop screen in a dark room'],
         ['key' => 'hero-marketing', 'tag' => 'Marketing', 'icon' => 'megaphone', 'title' => 'We <em>Grow.</em>', 'text' => 'Social media, paid ads and SEO content that turn attention into customers — planned, created and reported by one team.', 'link' => route('service', 'social-media-marketing'), 'cta' => 'Explore marketing', 'alt' => 'Marketing team celebrating around a table'],
         ['key' => 'hero-ai', 'tag' => 'Automation', 'icon' => 'bot', 'title' => 'We <em>Automate.</em>', 'text' => 'AI chatbots and smart workflows that answer customers, qualify leads and follow up — around the clock.', 'link' => route('service', 'ai-automation'), 'cta' => 'Explore AI & automation', 'alt' => 'Robotic hand reaching into a digital network'],
     ];
@@ -61,7 +61,7 @@
                 <div class="h2-tint"></div>
                 <div class="container h2-content">
                     <span class="h2-chip"><x-icon :name="$s['icon']" :size="16" /> {{ $s['tag'] }}</span>
-                    @if ($i === 0)<h1 class="h2-title">{!! $s['title'] !!}</h1>@else<h2 class="h2-title">{!! $s['title'] !!}</h2>@endif
+                    <h2 class="h2-title">{!! $s['title'] !!}</h2>
                     <p class="h2-sub">{{ $s['text'] }}</p>
                     <div class="h2-actions">
                         <button type="button" class="h2-btn h2-btn--green" data-book>Book a Free Consultation <span class="h2-btn-arrow"><x-icon name="arrow-right" :size="18" /></span></button>
@@ -70,6 +70,10 @@
                 </div>
             </article>
         @endforeach
+    </div>
+
+    <div class="container h2-kicker-wrap">
+        <div class="h2-kicker"><h1>Digital marketing, web development and AI automation agency</h1><span>Serving clients worldwide</span></div>
     </div>
 
     <div class="container h2-ui">

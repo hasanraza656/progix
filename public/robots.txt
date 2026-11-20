@@ -1,6 +1,27 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /system
 Disallow: /storage/
+
+# AI search & answer engines are welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
 
 # Replace with the live domain at launch:
 Sitemap: https://progixdigital.com/sitemap.xml
